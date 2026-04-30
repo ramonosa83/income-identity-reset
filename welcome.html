@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're In — The Income Identity Reset</title>
+  <meta name="description" content="Welcome to The Income Identity Reset masterclass. Here's what happens next.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0D0D14;
+      --bg-card: #15151E;
+      --gold: #C8AF78;
+      --gold-deep: #8B7355;
+      --gold-light: #D8C49A;
+      --text-light: #F4F1E8;
+      --text-muted: #A8A39A;
+      --text-soft: #6B6B6B;
+      --accent-cream: #FAF6EC;
+      --border-subtle: rgba(200, 175, 120, 0.2);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at top, rgba(200, 175, 120, 0.1) 0%, transparent 60%),
+        var(--bg-dark);
+    }
+
+    .brand-mark {
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      color: var(--gold);
+      margin-bottom: 32px;
+      text-transform: uppercase;
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      content: '';
+      display: inline-block;
+      width: 30px;
+      height: 1px;
+      background: var(--gold);
+      vertical-align: middle;
+      margin: 0 16px;
+    }
+
+    .checkmark-circle {
+      width: 80px;
+      height: 80px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .checkmark-circle::before {
+      content: '';
+      width: 24px;
+      height: 12px;
+      border-left: 2px solid var(--gold);
+      border-bottom: 2px solid var(--gold);
+      transform: rotate(-45deg) translate(2px, -2px);
+    }
+
+    .hero-eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(20px, 2.5vw, 24px);
+      color: var(--gold-light);
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+
+    .hero-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(48px, 7vw, 88px);
+      font-weight: 500;
+      line-height: 1.05;
+      margin-bottom: 28px;
+      color: var(--text-light);
+      letter-spacing: -0.01em;
+    }
+
+    .hero-title .accent {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(17px, 2vw, 19px);
+      color: var(--text-muted);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.65;
+    }
+
+    /* ============ EVENT CARD ============ */
+    .event-card {
+      background: rgba(200, 175, 120, 0.06);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      padding: 48px 40px;
+      margin: 60px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .event-card { padding: 32px 24px; }
+    }
+
+    .event-eyebrow {
+      font-size: 11px;
+      letter-spacing: 3px;
+      color: var(--gold-deep);
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .event-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 36px);
+      color: var(--gold);
+      margin-bottom: 24px;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .event-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 600px) {
+      .event-meta { gap: 20px; flex-direction: column; }
+    }
+
+    .event-meta-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .event-meta-label {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      color: var(--gold-deep);
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .event-meta-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .calendar-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .cal-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--gold);
+      padding: 12px 24px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      border: 1px solid var(--gold);
+      transition: all 0.3s ease;
+    }
+
+    .cal-btn:hover {
+      background: var(--gold);
+      color: var(--bg-dark);
+    }
+
+    /* ============ SECTION ============ */
+    .section {
+      padding: 60px 0;
+    }
+
+    .section-eyebrow {
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 4.5vw, 44px);
+      font-weight: 500;
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 24px;
+      color: var(--text-light);
+    }
+
+    .section-title .accent {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .section-intro {
+      font-size: 17px;
+      color: var(--text-muted);
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 48px;
+      line-height: 1.65;
+    }
+
+    /* ============ TIMELINE / WHAT'S NEXT ============ */
+    .timeline-list {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 24px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      align-items: flex-start;
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+    }
+
+    .timeline-marker {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border: 1px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 18px;
+      color: var(--gold);
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .timeline-content {
+      flex: 1;
+    }
+
+    .timeline-title {
+      font-size: 18px;
+      color: var(--text-light);
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .timeline-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ============ GIFT BOX ============ */
+    .gift {
+      background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 100%);
+    }
+
+    .gift-card {
+      background: rgba(200, 175, 120, 0.04);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      .gift-card { padding: 32px 24px; }
+    }
+
+    .gift-eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 18px;
+      color: var(--gold-light);
+      margin-bottom: 12px;
+    }
+
+    .gift-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 4vw, 36px);
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .gift-desc {
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.65;
+      margin-bottom: 28px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-primary {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--bg-dark);
+      padding: 16px 40px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      border: 1px solid var(--gold);
+    }
+
+    .cta-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 40px rgba(200, 175, 120, 0.25);
+    }
+
+    .cta-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--gold);
+      padding: 16px 40px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      border: 1px solid var(--gold);
+      transition: all 0.3s ease;
+    }
+
+    .cta-secondary:hover {
+      background: var(--gold);
+      color: var(--bg-dark);
+    }
+
+    /* ============ COMMUNITY ============ */
+    .community-card {
+      background: rgba(200, 175, 120, 0.04);
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      padding: 40px 36px;
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 600px) {
+      .community-card { padding: 28px 24px; }
+    }
+
+    .community-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      color: var(--gold);
+      margin-bottom: 12px;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .community-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    /* ============ ANCHOR QUOTE ============ */
+    .anchor {
+      padding: 80px 0 60px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at center, rgba(200, 175, 120, 0.08) 0%, transparent 70%),
+        var(--bg-dark);
+    }
+
+    .anchor-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(24px, 3.5vw, 34px);
+      color: var(--gold-light);
+      max-width: 720px;
+      margin: 0 auto 24px;
+      line-height: 1.4;
+    }
+
+    .anchor-cite {
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    /* ============ FOOTER ============ */
+    .footer {
+      padding: 40px 0 32px;
+      text-align: center;
+      border-top: 1px solid var(--border-subtle);
+      background: var(--bg-dark);
+    }
+
+    .footer-text {
+      font-size: 12px;
+      color: var(--text-soft);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .footer-help {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-help a {
+      color: var(--gold-light);
+      text-decoration: underline;
+      text-decoration-color: var(--border-subtle);
+      text-underline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container">
+      <div class="brand-mark">Creating Through Energy</div>
+      <div class="checkmark-circle"></div>
+      <p class="hero-eyebrow">You're in.</p>
+      <h1 class="hero-title">
+        Welcome to <span class="accent">The Income</span><br>
+        <span class="accent">Identity</span> Reset.
+      </h1>
+      <p class="hero-subtitle">
+        Your spot is confirmed. Confirmation has been sent to your email. Take a breath. Something is already shifting.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ EVENT CARD ============ -->
+  <section class="container">
+    <div class="event-card">
+      <p class="event-eyebrow">Save This Date</p>
+      <h2 class="event-title">The Income Identity Reset</h2>
+
+      <div class="event-meta">
+        <div class="event-meta-item">
+          <span class="event-meta-label">Date</span>
+          <span class="event-meta-value">Monday, May 18</span>
+        </div>
+        <div class="event-meta-item">
+          <span class="event-meta-label">Time</span>
+          <span class="event-meta-value">8 — 10 AM PT</span>
+        </div>
+        <div class="event-meta-item">
+          <span class="event-meta-label">Where</span>
+          <span class="event-meta-value">Live on Zoom</span>
+        </div>
+      </div>
+
+      <div class="calendar-buttons">
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=The+Income+Identity+Reset+Masterclass&dates=20260518T150000Z/20260518T170000Z&details=Live+masterclass+with+Ramon+Osa.+Zoom+link+will+be+emailed+24+hours+before.+Bring+a+notebook%2C+headphones%2C+and+a+quiet+space.&location=Zoom" target="_blank" class="cal-btn">+ Google Calendar</a>
+        <a href="data:text/calendar;charset=utf8,BEGIN%3AVCALENDAR%0AVERSION%3A2.0%0ABEGIN%3AVEVENT%0ADTSTART%3A20260518T150000Z%0ADTEND%3A20260518T170000Z%0ASUMMARY%3AThe%20Income%20Identity%20Reset%20Masterclass%0ADESCRIPTION%3ALive%20masterclass%20with%20Ramon%20Osa.%20Zoom%20link%20will%20be%20emailed%2024%20hours%20before.%20Bring%20a%20notebook%2C%20headphones%2C%20and%20a%20quiet%20space.%0ALOCATION%3AZoom%0AEND%3AVEVENT%0AEND%3AVCALENDAR" download="income-identity-reset.ics" class="cal-btn">+ Apple / iCal</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT'S NEXT ============ -->
+  <section class="section">
+    <div class="container">
+      <p class="section-eyebrow">What Happens Next</p>
+      <h2 class="section-title">Here's what to <span class="accent">expect.</span></h2>
+
+      <div class="timeline-list">
+        <div class="timeline-item">
+          <div class="timeline-marker">I</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Today: Watch your inbox</h3>
+            <p class="timeline-desc">A confirmation email is on its way. Check spam if you don't see it within 10 minutes. Add ramon@creatingthroughenergy.com to your contacts so future emails land safely.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">II</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Sunday May 17: Your Zoom link arrives</h3>
+            <p class="timeline-desc">24 hours before the masterclass, you'll receive an email with the Zoom link, a reminder of what to bring, and a few reflection prompts to prime your nervous system.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">III</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">Monday May 18 at 8 AM PT: We meet</h3>
+            <p class="timeline-desc">Show up 5 minutes early. Bring headphones, a notebook, and a quiet space where you won't be interrupted for two hours. The live somatic practice is most powerful in real time.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker">IV</div>
+          <div class="timeline-content">
+            <h3 class="timeline-title">After the masterclass: Lifetime access</h3>
+            <p class="timeline-desc">The recording is yours to keep. Watch it whenever, revisit anytime. Come back to it the next time you feel a financial ceiling activating in your body.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GIFT — ABUNDANCE RESET ============ -->
+  <section class="section gift">
+    <div class="container">
+      <div class="gift-card">
+        <p class="gift-eyebrow">While you wait</p>
+        <h2 class="gift-title">A gift to begin with.</h2>
+        <p class="gift-desc">
+          The Abundance Reset is a free 15-minute meditation that speaks directly to your nervous system. Listen tonight before bed. Listen again tomorrow morning. Notice what shifts before May 18 even arrives.
+        </p>
+        <a href="https://meditation.creatingthroughenergy.com" class="cta-primary">Get The Abundance Reset</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COMMUNITY ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="community-card">
+        <h3 class="community-title">Join the WhatsApp community</h3>
+        <p class="community-desc">
+          A space where I drop daily voice memos, reflections, and the occasional reminder that you are not alone in this work. Optional, but warmly recommended.
+        </p>
+        <a href="https://chat.whatsapp.com/JNutnuN2YrM0xFXWy3pnAS" class="cta-secondary" target="_blank">Join the Community</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ANCHOR QUOTE ============ -->
+  <section class="anchor">
+    <div class="container">
+      <p class="anchor-quote">"You excel at giving. It is now your time to learn to receive."</p>
+      <p class="anchor-cite">— Linda, after manifesting $1,500</p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">Creating Through Energy · Wealth From Safety</p>
+      <p class="footer-help">Need help? Email <a href="mailto:ramon@creatingthroughenergy.com">ramon@creatingthroughenergy.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
