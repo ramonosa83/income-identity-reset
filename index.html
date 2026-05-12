@@ -326,6 +326,48 @@
       line-height: 1.6;
     }
 
+    /* ============ ANCHOR DEFINITION (NEW) ============ */
+    .anchor-definition {
+      padding: 120px 0;
+      background:
+        radial-gradient(ellipse at center, rgba(200, 175, 120, 0.06) 0%, transparent 70%),
+        var(--bg-dark);
+      text-align: center;
+    }
+
+    .anchor-definition-eyebrow {
+      font-size: 12px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+
+    .anchor-definition-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(30px, 5vw, 48px);
+      color: var(--text-light);
+      line-height: 1.3;
+      max-width: 860px;
+      margin: 0 auto;
+      font-weight: 400;
+    }
+
+    .anchor-definition-text .accent {
+      color: var(--gold);
+    }
+
+    .anchor-definition-attribution {
+      margin-top: 40px;
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: var(--gold-deep);
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
     /* ============ PROMISE SECTION ============ */
     .promise {
       background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-card) 100%);
@@ -528,60 +570,121 @@
       border-top: 1px solid var(--border-subtle);
     }
 
-    /* ============ CASE STUDIES ============ */
-    .cases-list {
-      max-width: 800px;
+    /* ============ LINDA FEATURE (REPLACES CASE STUDIES) ============ */
+    .linda-feature {
+      max-width: 820px;
       margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
     }
 
-    .case-card {
-      padding: 48px 40px;
+    .linda-card {
+      padding: 56px 48px;
       border-left: 3px solid var(--gold);
-      background: linear-gradient(90deg, rgba(200, 175, 120, 0.06) 0%, transparent 100%);
+      background: linear-gradient(90deg, rgba(200, 175, 120, 0.08) 0%, transparent 100%);
       border-radius: 0 4px 4px 0;
     }
 
     @media (max-width: 600px) {
-      .case-card {
-        padding: 32px 24px;
+      .linda-card {
+        padding: 36px 24px;
       }
     }
 
-    .case-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 32px;
-      color: var(--gold);
-      margin-bottom: 8px;
-      font-weight: 500;
-    }
-
-    .case-archetype {
+    .linda-card-eyebrow {
       font-size: 13px;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       color: var(--gold-deep);
       text-transform: uppercase;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       font-weight: 500;
     }
 
-    .case-story {
+    .linda-card-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      color: var(--gold);
+      margin-bottom: 24px;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .linda-card-story {
       font-size: 17px;
       color: var(--text-light);
-      line-height: 1.65;
+      line-height: 1.7;
       margin-bottom: 20px;
     }
 
-    .case-quote {
+    .linda-card-story:last-of-type {
+      margin-bottom: 28px;
+    }
+
+    .linda-card-quote {
       font-family: 'Cormorant Garamond', serif;
       font-style: italic;
-      font-size: 20px;
+      font-size: 22px;
       color: var(--gold-light);
-      padding-left: 20px;
+      padding: 20px 0 20px 24px;
       border-left: 2px solid var(--gold-deep);
       line-height: 1.5;
+      margin-top: 32px;
+    }
+
+    /* ============ TAKEAWAYS (NEW — REPLACES OLD CASE STUDIES SECTION) ============ */
+    .takeaways-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 768px) {
+      .takeaways-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+
+    .takeaway-card {
+      padding: 40px 32px;
+      border: 1px solid var(--border-subtle);
+      border-radius: 4px;
+      background: rgba(200, 175, 120, 0.03);
+      transition: all 0.3s ease;
+    }
+
+    .takeaway-card:hover {
+      border-color: var(--gold);
+    }
+
+    .takeaway-card-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--gold-deep);
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .takeaway-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      color: var(--gold);
+      margin-bottom: 16px;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+
+    .takeaway-card-desc {
+      font-size: 16px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    .takeaway-card-desc strong {
+      color: var(--gold-light);
+      font-weight: 500;
     }
 
     /* ============ AGENDA ============ */
@@ -920,6 +1023,17 @@
     </div>
   </section>
 
+  <!-- ============ ANCHOR DEFINITION (NEW SECTION) ============ -->
+  <section class="anchor-definition">
+    <div class="container-narrow">
+      <p class="anchor-definition-eyebrow">The Definition That Changes Everything</p>
+      <p class="anchor-definition-text">
+        Abundance is the lived experience of having what you need — <span class="accent">in the moment you need it.</span>
+      </p>
+      <p class="anchor-definition-attribution">— The Anchor Teaching of the Masterclass</p>
+    </div>
+  </section>
+
   <!-- ============ THE PROMISE ============ -->
   <section class="section promise">
     <div class="container-narrow">
@@ -942,68 +1056,98 @@
       <ul class="promise-list">
         <li>
           <span class="promise-list-marker">I.</span>
-          <span class="promise-list-content"><strong>The 5 Forms of Abundance most people are blind to.</strong> Money is just one of them. You're standing in a downpour of the other four and don't recognize them as abundance.</span>
+          <span class="promise-list-content"><strong>A new definition of abundance</strong> — and the somatic experience of it in your own body. The redefinition alone is worth the cost of admission. Most people have never been taught what abundance actually is.</span>
         </li>
         <li>
           <span class="promise-list-marker">II.</span>
-          <span class="promise-list-content"><strong>Four real client stories — actual dollar amounts, actual mechanisms.</strong> Women who installed a new identity and watched abundance flow through channels they never expected.</span>
+          <span class="promise-list-content"><strong>The Formula</strong> — Bashar's three-step framework for becoming a channel for what you want, layered with my own work in nervous system safety. The most efficient receiving practice I've ever found.</span>
         </li>
         <li>
           <span class="promise-list-marker">III.</span>
-          <span class="promise-list-content"><strong>The live somatic Income Identity Reset.</strong> The same practice my 1:1 clients pay $3,000+ to access. We do it together, in real time.</span>
+          <span class="promise-list-content"><strong>The Real-Time Reset</strong> — a 3-layer practice (Honor · Regulate · Inquire) for the moments when abundance feels invisible and lack feels loud. Yours to keep and use forever.</span>
         </li>
         <li>
           <span class="promise-list-marker">IV.</span>
-          <span class="promise-list-content"><strong>A body that finally KNOWS abundance is safe.</strong> Not as a concept. As a felt experience. Because that's the only thing that actually shifts your bank account.</span>
+          <span class="promise-list-content"><strong>The 5 Forms of Abundance</strong> most people are blind to. Money is just one. You're standing in a downpour of the other four and don't recognize them as abundance.</span>
+        </li>
+        <li>
+          <span class="promise-list-marker">V.</span>
+          <span class="promise-list-content"><strong>The live somatic Income Identity Reset.</strong> Fifteen minutes of body-level work that installs a new reference point for "what abundance feels like." We do it together, in real time.</span>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- ============ CASE STUDIES ============ -->
+  <!-- ============ LINDA — LIVE STORY ============ -->
   <section class="section">
     <div class="container">
-      <p class="section-eyebrow">The Receipts</p>
-      <h2 class="section-title">Four real clients.<br><span class="accent">Real money. Real receipts.</span></h2>
+      <p class="section-eyebrow">Live Testimony</p>
+      <h2 class="section-title">A real client.<br><span class="accent">A real $1,500 moment. Live.</span></h2>
       <p class="section-intro">
-        These aren't theoretical case studies. These are real clients with real numbers and real dates — money that showed up in real bank accounts. We'll walk through each story in detail, and you'll hear from one of them live during the masterclass.
+        One of our community members is joining us live during the masterclass to share what happened in her body the day an unexpected $1,500 showed up — and what she almost did to refuse it. This is the receipt. Live. In the room with you.
       </p>
 
-      <div class="cases-list">
-        <div class="case-card">
-          <p class="case-archetype">Case Study One</p>
-          <h3 class="case-name">Dianne — The Controller Releases Her Grip</h3>
-          <p class="case-story">
-            59-year-old retired pharmaceutical executive. Had done years of personal development — Bob Proctor, EFT, masterminds — and still couldn't bridge knowing and being. Within months of starting the work, abundance started arriving through eleven different unexpected channels.
+      <div class="linda-feature">
+        <div class="linda-card">
+          <p class="linda-card-eyebrow">Featured Live Story</p>
+          <h3 class="linda-card-name">The Reluctant Receiver</h3>
+          <p class="linda-card-story">
+            Her parked car was hit minorly. The driver left an envelope with $100 and his contact info.
           </p>
-          <p class="case-quote">"I am the source."</p>
+          <p class="linda-card-story">
+            She tried to talk him into giving her LESS — only $50, plus $10 for detailing. The driver insisted on $1,500 to make her whole.
+          </p>
+          <p class="linda-card-story">
+            She'll join us LIVE during the masterclass to share what happened in her body in that moment — including the threat response that nearly made her refuse, and the shift that let her finally receive.
+          </p>
+          <p class="linda-card-quote">
+            "You excel at giving. It is now your time to learn to receive."
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TAKEAWAYS (THE TOOLS YOU WALK OUT WITH) ============ -->
+  <section class="section">
+    <div class="container">
+      <p class="section-eyebrow">What You'll Walk Out With</p>
+      <h2 class="section-title">Four tools.<br><span class="accent">Yours to keep forever.</span></h2>
+      <p class="section-intro">
+        This isn't a motivational talk. You'll leave with specific, named frameworks you can use the next morning — and the morning after that — until they become how you operate by default.
+      </p>
+
+      <div class="takeaways-grid">
+        <div class="takeaway-card">
+          <p class="takeaway-card-number">— Tool I —</p>
+          <h3 class="takeaway-card-title">The New Definition of Abundance</h3>
+          <p class="takeaway-card-desc">
+            <strong>Abundance is the lived experience of having what you need — in the moment you need it.</strong> Once you redefine it this way, you start seeing it everywhere. Including in the places you've been calling "lack."
+          </p>
         </div>
 
-        <div class="case-card">
-          <p class="case-archetype">Case Study Two</p>
-          <h3 class="case-name">Lana — The Strangler Lets Go</h3>
-          <p class="case-story">
-            62-year-old realtor. 25 years in the industry. Recently bankrupt, broken wrist, post-surgery. She was strangling YouTube as her only path to retirement income — and abundance arrived through five doors she never predicted: an old loan repaid, government rebates, an unexplained gift, a forgotten insurance policy that covered a $10K hospital bill, and a teaching job that came out of nowhere.
+        <div class="takeaway-card">
+          <p class="takeaway-card-number">— Tool II —</p>
+          <h3 class="takeaway-card-title">The Formula (Bashar, refined)</h3>
+          <p class="takeaway-card-desc">
+            Act on what excites you most. To the best of your ability. With zero insistence on outcome. The three-step framework — credited to Bashar — layered with my own work in nervous system safety. <strong>The most efficient receiving practice I've ever found.</strong>
           </p>
-          <p class="case-quote">"How lucky am I?"</p>
         </div>
 
-        <div class="case-card">
-          <p class="case-archetype">Case Study Three</p>
-          <h3 class="case-name">Jalene — The Debt Liberator</h3>
-          <p class="case-story">
-            Carrying $40,000 in credit card debt. Wanted to do an $18,000 coaching credential program but couldn't afford it. Within months, the credential program manifested for FREE — and the $40K of debt was liberated through a HELOC and a 0% credit card transfer. She didn't manifest INTO abundance. She manifested her way out of the hole.
+        <div class="takeaway-card">
+          <p class="takeaway-card-number">— Tool III —</p>
+          <h3 class="takeaway-card-title">The Real-Time Reset</h3>
+          <p class="takeaway-card-desc">
+            For the moments when abundance feels invisible. A 3-layer practice: <strong>HONOR</strong> your current belief system (don't bypass reality). <strong>REGULATE</strong> your nervous system (recover faster). <strong>INQUIRE</strong> into the belief underneath. Use it any time lack shows up.
           </p>
-          <p class="case-quote">The hole itself became the canvas for the manifestation.</p>
         </div>
 
-        <div class="case-card">
-          <p class="case-archetype">Case Study Four — The Closer (Live)</p>
-          <h3 class="case-name">The Reluctant Receiver</h3>
-          <p class="case-story">
-            A real client whose parked car got hit minorly. The driver left an envelope with $100 and his contact info. She tried to talk him into giving her LESS — only $50 plus $10 for detailing. The driver insisted on $1,500 to make her whole. She'll join us LIVE during the masterclass to share what happened in her body in that moment — including the threat response that nearly made her refuse.
+        <div class="takeaway-card">
+          <p class="takeaway-card-number">— Tool IV —</p>
+          <h3 class="takeaway-card-title">The 5 Forms of Abundance</h3>
+          <p class="takeaway-card-desc">
+            Money is one door. There are four others. Most people watch only the money door and miss <strong>Trade, Gift, Synchronicity, and Inspiration</strong> arriving daily. The framework alone changes how you see your last seven days.
           </p>
-          <p class="case-quote">"It is NOW your time to learn to receive."</p>
         </div>
       </div>
     </div>
@@ -1013,9 +1157,9 @@
   <section class="section forms">
     <div class="container">
       <p class="section-eyebrow">The Framework</p>
-      <h2 class="section-title">The 5 Forms of Abundance<br><span class="accent">behind every story.</span></h2>
+      <h2 class="section-title">The 5 Forms of Abundance<br><span class="accent">most people are missing.</span></h2>
       <p class="section-intro">
-        Every one of those manifestations arrived through one of five doors. Most people are looking for only one — and that's why they feel scarce. Abundance is already flowing toward you. Often through doors you haven't noticed yet.
+        Abundance arrives through five doors. Most people are watching only one — and that's why they feel scarce. Abundance is already flowing toward you. Often through doors you haven't noticed yet.
       </p>
 
       <div class="forms-grid">
@@ -1091,31 +1235,45 @@
 
       <div class="agenda-list">
         <div class="agenda-item">
-          <div class="agenda-time">0:00 — 0:25</div>
+          <div class="agenda-time">0:00 — 0:07</div>
           <div class="agenda-content">
-            <h3 class="agenda-title">The Diagnosis</h3>
-            <p class="agenda-desc">Why "I want money" doesn't work. The 5 Forms of Abundance most people are blind to. The real bottleneck — and it's not your strategy.</p>
+            <h3 class="agenda-title">Welcome</h3>
+            <p class="agenda-desc">A brief arrival breath. The intention of the morning. Permission to be in your body for the next two hours.</p>
           </div>
         </div>
         <div class="agenda-item">
-          <div class="agenda-time">0:25 — 1:20</div>
+          <div class="agenda-time">0:07 — 0:27</div>
           <div class="agenda-content">
-            <h3 class="agenda-title">The Receipts</h3>
-            <p class="agenda-desc">The four case studies in depth — Dianne, Lana, Jalene, and a LIVE client testimonial. Real numbers. Real mechanisms. Five guiding principles you'll take with you.</p>
+            <h3 class="agenda-title">Redefine</h3>
+            <p class="agenda-desc">Why traditional manifestation hasn't moved your income. The three fatal mistakes. The new definition of abundance — landed somatically, not just intellectually.</p>
           </div>
         </div>
         <div class="agenda-item">
-          <div class="agenda-time">1:20 — 1:50</div>
+          <div class="agenda-time">0:27 — 1:04</div>
           <div class="agenda-content">
-            <h3 class="agenda-title">The Installation</h3>
-            <p class="agenda-desc">The live somatic Income Identity Reset. We do the work together, in real time. You leave with the new identity actually installed in your body — not just understood in your head.</p>
+            <h3 class="agenda-title">Receive</h3>
+            <p class="agenda-desc">The Formula (Bashar, refined). Wanting vs. preferring. The Real-Time Reset for moments of apparent lack. Linda's live story — the proof in the room.</p>
           </div>
         </div>
         <div class="agenda-item">
-          <div class="agenda-time">1:50 — 2:00</div>
+          <div class="agenda-time">1:04 — 1:16</div>
           <div class="agenda-content">
-            <h3 class="agenda-title">Q&A and the Invitation</h3>
-            <p class="agenda-desc">Live Q&A. The Inner Circle invitation. A closing reframe that will follow you home.</p>
+            <h3 class="agenda-title">Recognize</h3>
+            <p class="agenda-desc">The 5 Forms of Abundance in depth. The synthesis moment — recognizing that abundance has been arriving the whole time, just through doors you weren't watching.</p>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">1:16 — 1:40</div>
+          <div class="agenda-content">
+            <h3 class="agenda-title">Install</h3>
+            <p class="agenda-desc">The 15-minute live somatic Income Identity Reset. You leave with the new identity actually installed in your body — not just understood in your head.</p>
+          </div>
+        </div>
+        <div class="agenda-item">
+          <div class="agenda-time">1:40 — 2:00</div>
+          <div class="agenda-content">
+            <h3 class="agenda-title">Celebrate &amp; Q&amp;A</h3>
+            <p class="agenda-desc">The Inner Circle invitation. Live Q&amp;A — meaningful runway for real questions. The closing reframe that will follow you home.</p>
           </div>
         </div>
       </div>
@@ -1136,8 +1294,9 @@
           <p class="price-card-cycle">Single payment</p>
           <ul class="price-card-features">
             <li>Live 2-hour masterclass on May 18</li>
-            <li>Live somatic Income Identity Reset</li>
-            <li>Live Q&A with Ramon</li>
+            <li>The live somatic Income Identity Reset</li>
+            <li>The Real-Time Reset framework (yours to keep)</li>
+            <li>Live Q&amp;A with Ramon</li>
             <li>Lifetime access to the recording</li>
           </ul>
           <a href="https://creatingthroughenergy.thrivecart.com/the-income-identity-reset/" class="price-card-cta secondary">Save My Seat</a>
@@ -1151,7 +1310,7 @@
           <ul class="price-card-features">
             <li>This masterclass — FREE</li>
             <li>Every future monthly masterclass — included</li>
-            <li>Monthly live Q&A calls with Ramon</li>
+            <li>Monthly live Q&amp;A calls with Ramon</li>
             <li>Ongoing community of people doing the work</li>
             <li>Access to past masterclass recordings</li>
             <li>Replay access — permanent</li>
@@ -1170,13 +1329,13 @@
 
       <div class="about">
         <p class="about-text">
-          A few years ago, I had the lights shut off in my apartment while playing Monopoly with my wife and 5-year-old daughter. I couldn't tell my daughter the truth. I told her we were having a campout.
+          A few years ago, I had the lights shut off in my apartment while playing Monopoly with my wife and young daughter. I couldn't tell my daughter the truth. I told her we were having a campout.
         </p>
         <p class="about-text">
           Today, I live in a million-dollar home with a tennis court out back. And the work that got me here isn't what most manifestation teachers will tell you about. It's nervous system work. It's identity work. It's the work that reaches the 95% of you that's running the show beneath your conscious mind.
         </p>
         <p class="about-text">
-          I've spent the last several years coaching high-functioning, self-aware people just like you through this exact work. The masterclass on May 18 is your invitation to step into it.
+          What I'm teaching is built on Bashar's formula — credited where credit is due — layered with my own work in nervous system recalibration after years of 1:1 client sessions with high-functioning, self-aware people just like you. The masterclass on May 18 is your invitation to step into it.
         </p>
         <p class="about-signature">— Ramon</p>
       </div>
@@ -1200,7 +1359,7 @@
         </div>
         <div class="faq-item">
           <h3 class="faq-question">What's the difference between this and the Inner Circle?</h3>
-          <p class="faq-answer">The masterclass is a single 2-hour event. Inner Circle is the ongoing community where this work continues every month — Q&As, masterclasses, community, accountability. If this masterclass lands for you, Inner Circle is where the transformation actually integrates.</p>
+          <p class="faq-answer">The masterclass is a single 2-hour event. Inner Circle is the ongoing community where this work continues every month — Q&amp;As, masterclasses, community, accountability. If this masterclass lands for you, Inner Circle is where the transformation actually integrates.</p>
         </div>
         <div class="faq-item">
           <h3 class="faq-question">Do I need any prerequisites?</h3>
